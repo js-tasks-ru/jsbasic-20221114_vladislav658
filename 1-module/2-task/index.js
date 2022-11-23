@@ -11,21 +11,8 @@ function print(text) {
  * чтобы функция sayHello работала корректно
  */
 function isValid(name) {
-  const nameValid = name;
-  if (nameValid === null) {
-    return (false);
-  }
-  const nameValidSymbol = nameValid.split('');
-  //или const nameValidSymbol = Array.from(nameValid);
-  let nameValidLength = name.length;
-  if (nameValidLength > 3) {
-    for ( i = 0; i < nameValidLength; i++) {
-	  if (nameValidSymbol[i] == " ") {
-        return (false);
-		break;
-	  }
-	}
-    return (true);	
+  if (name !== null && name.length > 3 && !name.includes(" ")) {
+    return (true);
   } else {
     return (false);
   }
