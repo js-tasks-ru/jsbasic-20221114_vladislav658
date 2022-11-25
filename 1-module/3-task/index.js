@@ -1,3 +1,7 @@
+// от vladislav658
 function ucFirst(str) {
-  // ваш код...
+  if (!str) {
+    return str;
+  }
+  return str.charAt(0).toUpperCase() + str.substring(1);	
 }
