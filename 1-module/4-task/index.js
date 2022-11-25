@@ -4,6 +4,6 @@ function checkSpam(str) {
   if (strValidUpper.includes("1XBET") || strValidUpper.includes("XXX")) {
 	return (true);
   } else {
-      return (false);
+    return (false);
   }
 }
