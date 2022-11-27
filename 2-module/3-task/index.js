@@ -5,10 +5,10 @@ let calculator = {
     this.second = b;
   },
   sum() {
-    return this.first + calculator.second;
+    return this.first + this.second;
   },
   mul() {
-    return this.first * calculator.second;
+    return this.first * this.second;
   },
 };
 
