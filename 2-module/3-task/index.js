@@ -1,14 +1,14 @@
 // от vladislav658
 let calculator = {
   read(a, b) {
-    calculator.first = a;
-    calculator.second = b;
+    this.first = a;
+    this.second = b;
   },
   sum() {
-    return calculator.first + calculator.second;
+    return this.first + calculator.second;
   },
   mul() {
-    return calculator.first * calculator.second;
+    return this.first * calculator.second;
   },
 };
 
