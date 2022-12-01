@@ -1,10 +1,10 @@
 // от vladislav658
 function camelize(str) {
-  let getCamelaizes = str.split('-');
-    for (let key in getCamelaizes) {
-	  if (key > 0) {
-        getCamelaizes[key] = getCamelaizes[key].charAt(0).toUpperCase() + getCamelaizes[key].substring(1);
-	  }
-    }
-  return getCamelaizes.join('');
+  let getCamelaizesOne = str.split('-');
+
+  getCamelaizesMore = getCamelaizesOne
+    .filter((zeroIndex, index) => (index > 0))
+    .map(item => (item.charAt(0).toUpperCase() + item.substring(1)));
+	
+  return [...getCamelaizesOne[0], ...getCamelaizesMore].join('');
 }
