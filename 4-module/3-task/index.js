@@ -3,23 +3,21 @@ function highlight(table) {
   let  bazeCollection = table.rows;
   
   for (let row of bazeCollection) {
-	for (let cell of row.cells) {
-	  if (cell.getAttribute('data-available') == 'true') {
+	  if (row.cells[3].getAttribute('data-available') == 'true') {
 		row.classList.add('available');
-	  } else if (cell.getAttribute('data-available') == 'false') {
+	  } else if (row.cells[3].getAttribute('data-available') == 'false') {
 		row.classList.add('unavailable');
 	  } else {
 		row.setAttribute('hidden', 'hidden');
 	  }
-	  if (cell.innerHTML == 'm') {
+	  if (row.cells[2].innerHTML == 'm') {
 		row.classList.add('male');
 	  } 
-	  if (cell.innerHTML == 'f') {
+	  if (row.cells[2].innerHTML == 'f') {
 		row.classList.add('female');
 	  }
-	  if (parseInt(cell.innerHTML, 10) < 18) {
+	  if (parseInt(row.cells[1].innerHTML, 10) < 18) {
 		row.setAttribute('style', 'text-decoration: line-through;');
 	  }
-	}
   }
 }
