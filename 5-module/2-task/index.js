@@ -1,20 +1,11 @@
 // от vladislav658
 function toggleText() {
   let buttonToggleText = document.querySelector('button.toggle-text-button');
-  let counterVal = 0;//Начальный счетчик кликов
+  let blockText = document.getElementById('text');
 
-  function toggleTextCount(){
-    updateCount(++counterVal);
+  function blockTextSetAttribut() {
+    blockText.hidden = !blockText.hidden;
   }
-  function updateCount(val) {
-    let toggleText = document.getElementById("text");
-	toggleText.setAttribute('counter', val);//Атрибут - значение счетчика кликов
-    if (val % 2 === 0) {
-	  toggleText.removeAttribute('hidden');
-    } else {
-	  toggleText.setAttribute('hidden', 'false');
-    }
-  }
-
-  buttonToggleText.addEventListener('click', toggleTextCount);   
+ 
+   buttonToggleText.addEventListener('click', blockTextSetAttribut);
 }
